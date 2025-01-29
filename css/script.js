@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
       window.instgrm.Embeds.process();
     }
   });
-  let images = ['images/home1.png', 'images/home2.png']; // Array of images
+  let images = ['images/home2.png', 'images/home1.png']; // Array of images
 let currentIndex = 0;
 
 function changeBackgroundImage() {
@@ -14,7 +14,7 @@ function changeBackgroundImage() {
 }
 
 // Change the background every 5 seconds
-setInterval(changeBackgroundImage, 5000);
+setInterval(changeBackgroundImage, 10000);
 function playAudio() {
   var audio = document.getElementById("backgroundAudio");
   
