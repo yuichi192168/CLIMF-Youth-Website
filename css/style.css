@@ -3,6 +3,390 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 
+/* Button Styling */
+.quote-button {
+	background-color: #A594FC; /* Green background */
+	color: white;
+	border: none;
+	padding: 15px 30px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-bottom: 20px; /* Space below the button */
+  }
+  
+  .quote-button:hover {
+	background-color: #000000; /* Darker green on hover */
+  }
+  
+  /* Quote Image Display Styling */
+  .quote-image-display {
+	margin-bottom: 20px; /* Space below the image */
+  }
+  
+  .quote-image-display img {
+	max-width: 100%; /* Ensure the image fits within the container */
+	height: auto;
+	border-radius: 10px; /* Rounded corners */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+
+
+
+
+
+/* Home Section */
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; /* Full viewport height */
+	text-align: center;
+	color: white;
+	background-size: cover;
+	background-position: center;
+  }
+  
+  /* Welcome Text Styling */
+  .welcome-text {
+	font-size: 3rem; /* Adjust size as needed */
+	font-weight: bold;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+	margin-bottom: 20px; /* Space between text and arrow */
+  }
+  
+  .welcome-text span {
+	display: inline-block; /* Ensure each span can animate independently */
+  }
+  
+  /* Go Down Arrow Styling */
+  .go-down {
+	color: white;
+	font-size: 2rem;
+	text-decoration: none;
+	animation-delay: 1s; /* Delay the animation */
+  }
+  
+  .go-down:hover {
+	color: #A594FC; /* Change color on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+	.welcome-text {
+	  font-size: 2rem; /* Smaller font size for mobile */
+	}
+  
+	.go-down {
+	  font-size: 1.5rem; /* Smaller arrow for mobile */
+	}
+  }
+  
+  /* Zoom Out Animation */
+  .zoom-out {
+	animation: zoomOut 1s ease-out forwards;
+  }
+  
+  @keyframes zoomOut {
+	from {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	to {
+	  transform: scale(0.8);
+	  opacity: 0.5;
+	}
+  }
+
+
+
+   /* Parallax Effect */
+   .parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  /* Smooth Scroll */
+  html {
+	scroll-behavior: smooth;
+  }
+
+  /* Additional Animations */
+  @keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
+  .fadeInUp {
+	animation: fadeInUp 1s ease-out;
+  }
+
+
+/* Container for Instagram Posts */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  /* Instagram Grid Layout */
+  .instagram-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+	gap: 20px; /* Space between posts */
+	margin-top: 20px;
+  }
+  
+  /* Instagram Post Styling */
+  .instagram-post {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .instagram-post:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Instagram Embed Styling */
+  .instagram-media {
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+	.instagram-grid {
+	  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+	  gap: 15px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.instagram-grid {
+	  grid-template-columns: 1fr; /* Single column on mobile */
+	}
+  }
+
+	/* Section Styling */
+	.gallery {
+		padding: 50px 20px;
+		background-color: #f9f9f9;
+		text-align: center;
+	  }
+	
+	  .gallery h2 {
+		font-size: 2rem;
+		margin-bottom: 30px;
+		color: #333;
+	  }
+	
+	  /* Responsive Gallery Grid */
+	  .content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 20px;
+		justify-content: center;
+	  }
+	
+	  .box {
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	  }
+	
+	  .box img {
+		width: 100%;
+		height: auto;
+		transition: transform 0.3s ease;
+	  }
+	
+	  .box:hover img {
+		transform: scale(1.1);
+	  }
+
+	/* Container Styles */
+	.iframe-container {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		padding-top: 56.25%; /* Aspect ratio for the iframe */
+		border-radius: 12px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  }
+	
+	  .iframe-container:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	  }
+	
+	  .iframe-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 12px;
+	  }
+	
+	  /* Grid Layout */
+	  .content {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin-top: 40px;
+	  }
+	
+	  /* Section Headings */
+	  .about h4 {
+		font-size: 1.5rem;
+		color: #333;
+	  }
+	
+	  .about p {
+		font-size: 1rem;
+		color: #555;
+		line-height: 1.5;
+	  }
+	
+	  /* Box Hover Effects */
+	  .box {
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  }
+	
+	  .box:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	  }
+	
+	  .img img {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+		margin-bottom: 15px;
+	  }
+
+* {
+	box-sizing: border-box;
+  }
+
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+
+  .content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+  }
+
+  .box2 {
+	background: #ffffff;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  blockquote.instagram-media {
+	background: #fff;
+	border: none;
+	width: 100%;
+  }
+
+  h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 24px;
+	color: #333;
+  }
+
+/* Go to Top Button */
+#goTopBtn {
+	display: none; /* Hidden by default */
+	position: fixed;
+	bottom: 20px; /* Distance from the bottom */
+	right: 20px; /* Distance from the right */
+	z-index: 1000;
+	background-color:#A594FC; /* Semi-transparent black */
+	color: white;
+	border: none;
+	border-radius: 50%; /* Circular button */
+	width: 50px;
+	height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  #goTopBtn:hover {
+	background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+  }
+  
+  #goTopBtn.show {
+	display: block; /* Show the button */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+	#goTopBtn {
+	  bottom: 10px; /* Adjust for smaller screens */
+	  right: 10px; /* Adjust for smaller screens */
+	  width: 40px; /* Smaller size for mobile */
+	  height: 40px;
+	  font-size: 20px; /* Smaller font size for mobile */
+	}
+  }
+/* Audio Control */
+.audio-control {
+	position: fixed;
+	bottom: 20px; /* Distance from the bottom */
+	left: 20px; /* Distance from the left */
+	z-index: 1000;
+	background: #A594FC;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px; /* Adjust font size for better readability */
+	transition: background 0.3s ease;
+  }
+  
+  .audio-control:hover {
+	background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+	.audio-control {
+	  bottom: 10px; /* Adjust for smaller screens */
+	  left: 10px; /* Adjust for smaller screens */
+	  padding: 8px 16px; /* Smaller padding for mobile */
+	  font-size: 14px; /* Smaller font size for mobile */
+	}
+  }
 
 
 body{
@@ -204,7 +588,6 @@ header .ham-burger.active span:nth-child(2){
 .home h1 span{
 	color:#ffffff;;
 }
-
 
 /*About section*/
 
